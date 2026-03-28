@@ -1,24 +1,26 @@
-// Esperar a que cargue el contenido
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // Efecto de aparición suave para las imágenes al hacer scroll
-    const images = document.querySelectorAll('.gallery-item');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
+.perfil-info h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
 
-    images.forEach(img => {
-        img.style.opacity = '0';
-        img.style.transform = 'translateY(20px)';
-        img.style.transition = 'all 0.6s ease-out';
-        observer.observe(img);
-    });
+.subtitulo-rojo {
+    color: #ff0000; /* El rojo brillante que tienes en la imagen */
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
 
-    console.log("Portafolio de Edwin Sánchez Art cargado correctamente.");
-});
+.bio-iconos {
+    text-align: left; /* Alineado a la izquierda como en Instagram */
+    max-width: fit-content;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.bio-iconos p {
+    margin: 5px 0;
+}
