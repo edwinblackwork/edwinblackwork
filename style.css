@@ -28,30 +28,32 @@ header {
     align-items: center;
     border-bottom: 2px solid #ce1212; /* Esa línea roja elegante que separa el banner del resto */
 }
-/* --- Sección Nueva: Info debajo del Banner --- */
+
 .perfil-info {
-    text-align: center; /* ESTO CENTRA TODO EL CONTENIDO */
-    padding: 40px 20px;
+    display: flex; /* Activa el modo flexible */
+    flex-direction: column; /* Pone el nombre sobre la descripción */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente si hay espacio */
+    text-align: center; /* Centra el texto por dentro */
+    padding: 60px 20px;
     background: #0a0a0a;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Doble seguridad para centrar */
-    justify-content: center;
+    width: 100%; /* Asegura que ocupe todo el ancho para poder centrar */
 }
 
 .perfil-info h1 {
-    font-size: 1.5rem; /* Tamaño más pequeño y elegante */
+    font-size: 1.5rem;
     color: #f5f5f5;
-    margin: 0;
-    letter-spacing: 8px; /* Más espacio entre letras = más lujo */
+    margin: 0 auto; /* El 'auto' ayuda a empujar desde los lados */
+    letter-spacing: 8px;
     text-transform: uppercase;
-    font-weight: 400; /* Letra más delgada para que sea sobria */
+    font-weight: 400;
+    width: fit-content; /* Para que el centrado sea exacto sobre el texto */
 }
 
 .perfil-info p {
-    color: #ce1212; 
-    font-size: 0.9rem; /* Descripción pequeña para que el nombre mande */
-    margin-top: 10px;
+    color: #ce1212;
+    font-size: 0.9rem;
+    margin: 10px auto 0 auto;
     letter-spacing: 3px;
     text-transform: uppercase;
 }
