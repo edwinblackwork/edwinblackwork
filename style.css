@@ -1,138 +1,126 @@
-/* Variables de color */
+/* --- CONFIGURACIÓN GENERAL --- */
 :root {
-    --negro: #0a0a0a;
-    --gris-oscuro: #1a1a1a;
-    --rojo-detalles: #ce1212;
-    --blanco: #f5f5f5;
-    --whatsapp: #25d366;
+    --rojo-principal: #ce1212;
+    --negro-fondo: #0a0a0a;
+    --blanco-texto: #ffffff;
+    --gris-detalle: #bbbbbb;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-
-body { 
-    font-family: 'Helvetica Neue', Arial, sans-serif; 
-    background-color: var(--negro); 
-    color: var(--blanco); 
-    line-height: 1.6;
+body {
+    background-color: var(--negro-fondo);
+    color: var(--blanco-texto);
+    font-family: 'Inter', sans-serif; /* O la que estés usando */
+    margin: 0;
+    padding: 0;
 }
 
-header {
-    background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), 
-                url('banner.jpg'); /* Asegúrate de subir una foto llamada banner.jpg */
-    background-size: cover;
-    background-position: center;
-    height: 70vh; /* Esto hace que el banner ocupe buen espacio en la pantalla */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid #ce1212; /* Esa línea roja elegante que separa el banner del resto */
+/* --- LOGO Y HEADER --- */
+.main-logo {
+    display: block;
+    max-width: 280px;
+    margin: 40px auto;
+    filter: drop-shadow(0 0 15px rgba(206, 18, 18, 0.2));
+    animation: fadeIn 2s ease-in-out;
 }
 
-.perfil-info {
-    display: flex; /* Activa el modo flexible */
-    flex-direction: column; /* Pone el nombre sobre la descripción */
-    align-items: center; /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente si hay espacio */
-    text-align: center; /* Centra el texto por dentro */
-    padding: 60px 20px;
-    background: #0a0a0a;
-    width: 100%; /* Asegura que ocupe todo el ancho para poder centrar */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-
-.perfil-info h1 {
-    font-size: 1.5rem;
-    color: #f5f5f5;
-    margin: 0 auto; /* El 'auto' ayuda a empujar desde los lados */
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    font-weight: 400;
-    width: fit-content; /* Para que el centrado sea exacto sobre el texto */
-}
-
-.perfil-info p {
-    color: #ce1212;
-    font-size: 0.9rem;
-    margin: 10px auto 0 auto;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-h1 { font-size: 4rem; letter-spacing: 5px; margin-bottom: 10px; }
 
 .btn-principal {
-    margin-top: 20px;
-    padding: 15px 30px;
-    background-color: var(--rojo-detalles);
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: var(--rojo-principal);
     color: white;
+    padding: 12px 25px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    text-transform: uppercase;
     transition: 0.3s;
 }
 
-.container { max-width: 1100px; margin: auto; padding: 50px 20px; }
-
-h2 { 
-    font-size: 2rem; 
-    margin: 40px 0 20px; 
-    border-left: 5px solid var(--rojo-detalles); 
-    padding-left: 15px; 
-    text-transform: uppercase;
+.btn-principal:hover {
+    background-color: #ff0000;
+    transform: scale(1.05);
 }
 
-/* GALERÍA */
+/* --- SECCIÓN PERFIL --- */
+.perfil-info {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.perfil-info h1 {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    color: var(--rojo-principal);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.bio-detalles p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+/* --- GALERÍA (Grid de Instagram Style) --- */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
 }
+
 .gallery-item img {
     width: 100%;
-    height: 400px;
+    aspect-ratio: 1 / 1; /* Para que todas sean cuadradas como en Insta */
     object-fit: cover;
-    border-radius: 8px;
-    filter: grayscale(40%);
+    border-radius: 4px;
     transition: 0.4s;
+    filter: grayscale(30%);
 }
-.gallery-item img:hover { filter: grayscale(0%); transform: scale(1.02); }
 
-/* CUIDADOS */
-.grid-cuidados {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.gallery-item img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
 }
-.cuidado-card {
-    background: var(--gris-oscuro);
-    padding: 30px;
-    border-radius: 10px;
+
+/* --- FOOTER Y BOTÓN FLOTANTE --- */
+footer {
     text-align: center;
+    padding: 60px 20px;
+    border-top: 1px solid #222;
 }
-.cuidado-card i { font-size: 2.5rem; color: var(--rojo-detalles); margin-bottom: 15px; }
 
-/* FAQ */
-details { background: var(--gris-oscuro); margin-bottom: 10px; padding: 20px; border-radius: 8px; cursor: pointer; }
-summary { font-weight: bold; font-size: 1.1rem; }
+.social-links a {
+    color: white;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
 
-/* FOOTER */
-footer { text-align: center; padding: 80px 20px; background: #050505; }
-.social-links a { color: white; margin: 0 15px; text-decoration: none; font-size: 1.2rem; }
-
-/* WHATSAPP FLOAT */
 .whatsapp-float {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: var(--whatsapp);
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
     color: white;
     width: 60px;
     height: 60px;
-    border-radius: 50px;
+    border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     z-index: 100;
 }
