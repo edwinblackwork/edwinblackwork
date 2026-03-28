@@ -30,26 +30,29 @@ header {
 }
 /* --- Sección Nueva: Info debajo del Banner --- */
 .perfil-info {
-    text-align: center;
-    padding: 60px 20px;
+    text-align: center; /* ESTO CENTRA TODO EL CONTENIDO */
+    padding: 40px 20px;
     background: #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Doble seguridad para centrar */
+    justify-content: center;
 }
 
 .perfil-info h1 {
-    font-size: 1.8rem; /* Antes estaba en 3rem, esto lo hace casi a la mitad */
+    font-size: 1.5rem; /* Tamaño más pequeño y elegante */
     color: #f5f5f5;
     margin: 0;
-    letter-spacing: 6px; /* Aumentamos un poco el espacio para que se vea más fino */
+    letter-spacing: 8px; /* Más espacio entre letras = más lujo */
     text-transform: uppercase;
-    font-weight: 600; /* Le bajamos un poco el grosor para que se vea más estilizado */
-
+    font-weight: 400; /* Letra más delgada para que sea sobria */
 }
 
 .perfil-info p {
-    color: #ce1212; /* El rojo para que resalte tu especialidad */
-    font-size: 1.2rem;
+    color: #ce1212; 
+    font-size: 0.9rem; /* Descripción pequeña para que el nombre mande */
     margin-top: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
