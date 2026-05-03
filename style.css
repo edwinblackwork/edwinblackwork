@@ -25,10 +25,9 @@ header {
 }
 
 .logo {
-    font-family: 'UnifrakturMaguntia', cursive;
-    font-size: 3rem;
-    color: #000;
-    margin: 0;
+  font-family: 'Uncial Antiqua', serif !cite: 1;
+    text-transform: lowercase; 
+    letter-spacing: 1px;
 }
 
 nav a {
@@ -110,8 +109,9 @@ nav a {
 }
 
 .welcome-text h2 {
-    font-family: 'UnifrakturMaguntia', cursive;
-    font-size: 2.5rem;
+    font-family: 'Uncial Antiqua', serif !cite: 1;
+    text-transform: lowercase; 
+    letter-spacing: 1px;
 }
 
 .btn-dark {
@@ -130,10 +130,9 @@ nav a {
 }
 
 .spec-title {
-    font-family: 'UnifrakturMaguntia', cursive;
-    font-size: 1.8rem;
-    display: block;
-    margin-bottom: 20px;
+   font-family: 'Uncial Antiqua', serif !cite: 1;
+    text-transform: lowercase; 
+    letter-spacing: 1px;
 }
 
 .specializing span:not(.spec-title) {
@@ -154,6 +153,7 @@ footer {
 }
 
 .footer-logo {
-    font-family: 'UnifrakturMaguntia', cursive;
-    font-size: 2.2rem;
+    font-family: 'Uncial Antiqua', serif !cite: 1;
+    text-transform: lowercase; 
+    letter-spacing: 1px;
 }
