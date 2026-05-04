@@ -3,76 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edwin Blackwork | Tattoo & Illustration Medellín</title>
-    <!-- Fuentes: Estética Gótica y Moderna -->
-   <!-- 1. Primero la fuente de Google -->
-<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
-<!-- 2. Luego tu archivo de estilos -->
-<link rel="stylesheet" href="style.css">
-    
+    <title>Edwin Blackwork | Tattoo & Art Medellín</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1 class="logo">edwin blackwork</h1>
         <nav>
-            <a href="#about">Sobre mí</a>
-            <a href="#services">Servicios</a>
-            <a href="#gallery">Galería</a>
-            <a href="#contact">Contacto</a>
+            <div class="logo">Edwin Blackwork</div>
+            <a href="https://wa.me/573001234567" class="btn-cta">Cotizar Tatuaje</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Donde cada línea cuenta una historia</h1>
-        <a href="https://wa.me/573126573841" class="btn-cta">AGENDAR CITA</a>
-    </section>
-
-    <section id="services" class="services">
-        <div class="service-card">
-            <img src="https://via.placeholder.com/400x600/111/8b0000?text=Anime+Tattoo" alt="Anime Tattoo">
-            <h3>Anime</h3>
-            <p>Líneas sólidas y fidelidad al diseño original.</p>
-        </div>
-        <div class="service-card">
-            <img src="https://via.placeholder.com/400x600/111/8b0000?text=Blackwork" alt="Blackwork">
-            <h3>Blackwork</h3>
-            <p>Altos contrastes y piezas de gran escala.</p>
-        </div>
-        <div class="service-card">
-            <img src="https://via.placeholder.com/400x600/111/8b0000?text=Neotradicional" alt="Neotradicional">
-            <h3>Neotradicional</h3>
-            <p>Estructura clásica con estética oscura.</p>
+        <div class="hero-content">
+            <h1>Donde cada línea cuenta una historia</h1>
+            <p>Especialista en tatuajes de alto contraste en Medellín y Envigado.</p>
+            <a href="https://wa.me/573001234567" class="btn-main">Agendar Cita</a>
         </div>
     </section>
 
-    <section id="about" class="welcome">
-        <div class="welcome-img"></div>
-        <div class="welcome-text">
-            <h2>bienvenido a edwin blackwork.</h2>
-            <p>Especialista en tatuajes de alto contraste en Medellín y Envigado. Con un enfoque en líneas sólidas y piezas de gran escala, transformo tus ideas en arte permanente.</p>
-            <p>Cada pieza es un diseño que fusiona la estética oscura con la cultura pop.</p>
-            <a href="https://www.instagram.com/edwinblackwork" class="btn-dark">VER PORTAFOLIO EN INSTAGRAM</a>
+    <section class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2 class="section-title">El Artista</h2>
+                <p><strong>Especialista en tatuajes de alto contraste.</strong> Con un enfoque en líneas sólidas y texturas, transformo tus ideas en arte permanente.</p>
+                <p>Mi trabajo se especializa en estilos como <strong>Anime, Blackwork, Neotradicional y Ornamental</strong>.</p>
+            </div>
+            <div class="about-image">
+                <!-- Aquí puedes poner tu foto de perfil -->
+                <img src="perfil-edwin.jpg" alt="Edwin Blackwork">
+            </div>
         </div>
     </section>
 
-    <div class="specializing">
-        <span class="spec-title">Especializado en:</span>
-        <span>ANIME</span>
-        <span>BLACKWORK</span>
-        <span>NEOTRADICIONAL</span>
-        <span>ORNAMENTAL</span>
-    </div>
-
-    <footer id="contact">
-        <div class="footer-logo">edwin blackwork</div>
-        <div class="footer-info">
-            <p>Medellín / Envigado, Colombia</p>
-            <p>Instagram: @edwinblackwork</p>
+    <section class="gallery">
+        <h2 class="section-title">Galería de Piezas</h2>
+        <div class="gallery-grid">
+            <!-- Todas las fotos aquí deben ser 1080x1350 -->
+            <div class="gallery-item">
+                <img src="tatuaje1.jpg" alt="Tatuaje Blackwork">
+            </div>
+            <div class="gallery-item">
+                <img src="tatuaje2.jpg" alt="Tatuaje Anime">
+            </div>
+            <div class="gallery-item">
+                <img src="tatuaje3.jpg" alt="Tatuaje Neotradicional">
+            </div>
+            <div class="gallery-item">
+                <img src="tatuaje4.jpg" alt="Tatuaje Ornamental">
+            </div>
         </div>
-        <a href="https://wa.me/573126573841" class="btn-dark" style="background: #000;">AGENDAR AHORA</a>
+    </section>
+
+    <section class="aftercare">
+        <h2 class="section-title">Cuidados</h2>
+        <div class="care-grid">
+            <div class="care-item"><i class="fas fa-hand-holding-droplet"></i><h3>Lavado</h3><p>Jabón neutro y agua fria 2-3 veces al día.</p></div>
+            <div class="care-item"><i class="fas fa-layer-group"></i><h3>Hidratación</h3><p>Capa delgada de crema recomendada.</p></div>
+            <div class="care-item"><i class="fas fa-sun"></i><h3>Sol</h3><p>Evitar exposición directa por 15 días.</p></div>
+            <div class="care-item"><i class="fas fa-swimmer"></i><h3>Agua</h3><p>No piscinas, saunas ni mar por 15 días.</p></div>
+            <div class="care-item"><i class="fas fa-hand-dots"></i><h3>Costras</h3><p>No rascar ni arrancar la piel por ningún motivo.</p></div>
+            <div class="care-item"><i class="fas fa-shirt"></i><h3>Ropa</h3><p>Usar prendas holgadas de algodón y limpias.</p></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">Edwin Blackwork</div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/edwinblackwork" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+        <p class="copyright">&copy; 2026 Edwin Blackwork - Medellín, Colombia</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
