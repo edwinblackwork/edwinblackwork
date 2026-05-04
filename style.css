@@ -1,159 +1,132 @@
 :root {
     --negro-fondo: #0a0a0a;
-    --rojo-acento: #8b0000;
-    --blanco-texto: #e5e5e5;
-    --gris-oscuro: #1a1a1a;
-}
-
-* {
-    box-sizing: border-box;
+    --negro-tarjeta: #141414;
+    --rojo-detalles: #990000;
+    --blanco-titulos: #ffffff;
+    --gris-texto: #b0b0b0;
 }
 
 body {
-    margin: 0;
-    font-family: 'Oswald', sans-serif;
     background-color: var(--negro-fondo);
-    color: var(--blanco-texto);
-    overflow-x: hidden;
+    color: var(--gris-texto);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, .logo, .footer-logo {
+    font-family: 'MedievalSharp', cursive;
+    color: var(--blanco-titulos);
+    margin: 0;
 }
 
 header {
-    background: #ffffff;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 4px solid var(--rojo-acento);
+    background: rgba(10, 10, 10, 0.98);
+    padding: 30px 5%;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo {
-  font-family: 'Uncial Antiqua', serif !cite: 1;
-    text-transform: lowercase; 
-    letter-spacing: 1px;
-}
-
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #000;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.hero {
-    height: 85vh;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://via.placeholder.com/1920x1080/000/333?text=Edwin+Blackwork+Studio');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero h1 {
-    font-family: 'UnifrakturMaguntia', cursive;
-    font-size: 3.5rem;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.btn-cta {
-    border: 2px solid var(--blanco-texto);
-    color: var(--blanco-texto);
-    padding: 15px 40px;
-    text-decoration: none;
-    transition: 0.4s ease;
-}
-
-.btn-cta:hover {
-    background: var(--rojo-acento);
-    border-color: var(--rojo-acento);
-}
-
-.services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 100px 5%;
-    gap: 30px;
-}
-
-.service-card {
-    width: 300px;
-    text-align: center;
-}
-
-.service-card img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border: 1px solid var(--gris-oscuro);
-}
-
-.welcome {
-    display: flex;
-    flex-wrap: wrap;
-    background: #fff;
-    color: #000;
-}
-
-.welcome-img {
-    flex: 1 1 500px;
-    min-height: 400px;
-    background: url('https://via.placeholder.com/800x800/222/8b0000?text=Edwin+Art') center/cover;
-}
-
-.welcome-text {
-    flex: 1 1 500px;
-    padding: 80px 50px;
-}
-
-.welcome-text h2 {
-    font-family: 'Uncial Antiqua', serif !cite: 1;
-    text-transform: lowercase; 
-    letter-spacing: 1px;
-}
-
-.btn-dark {
-    background: var(--rojo-acento);
-    color: #fff;
-    padding: 12px 30px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 25px;
-}
-
-.specializing {
-    padding: 50px 0;
-    background: #000;
-    text-align: center;
-}
-
-.spec-title {
-   font-family: 'Uncial Antiqua', serif !cite: 1;
-    text-transform: lowercase; 
-    letter-spacing: 1px;
-}
-
-.specializing span:not(.spec-title) {
-    margin: 0 15px;
-    font-size: 1.1rem;
-    letter-spacing: 3px;
-}
-
-footer {
-    background: #fff;
-    color: #000;
-    padding: 60px 10%;
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.footer-logo {
-    font-family: 'Uncial Antiqua', serif !cite: 1;
-    text-transform: lowercase; 
+.logo {
+    font-size: 2.5rem;
     letter-spacing: 1px;
+    border-left: 4px solid var(--rojo-detalles);
+    padding-left: 15px;
 }
+
+.btn-cta, .btn-main {
+    background-color: var(--rojo-detalles);
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-main { padding: 18px 45px; font-size: 1.1rem; margin-top: 30px; display: inline-block; }
+.btn-cta:hover, .btn-main:hover { background-color: #bb0000; box-shadow: 0 0 15px rgba(153, 0, 0, 0.4); }
+
+.hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.8)), url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 15px; }
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 60px;
+}
+
+.about { padding: 100px 5%; background: var(--negro-tarjeta); }
+.about-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
+.about-text { flex: 1; min-width: 300px; }
+.about-image img { width: 100%; max-width: 400px; border: 1px solid #333; filter: grayscale(100%); }
+
+/* Galería Optimizada para 1080x1350 */
+.gallery { padding: 100px 5%; }
+.gallery-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+.gallery-item { 
+    position: relative; 
+    overflow: hidden; 
+    aspect-ratio: 1080 / 1350; /* Esto fuerza la proporción de Instagram */
+    background: #111;
+}
+.gallery-item img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Asegura que la foto llene el espacio sin deformarse */
+    filter: brightness(0.8); 
+    transition: 0.5s; 
+}
+.gallery-item:hover img { filter: brightness(1); transform: scale(1.03); }
+
+/* Cuidados: 3 columnas arriba y 3 abajo */
+.aftercare { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
+.care-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+
+@media (max-width: 900px) {
+    .care-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.5rem; }
+}
+
+.care-item { 
+    background: var(--negro-tarjeta); 
+    padding: 40px 25px; 
+    text-align: center; 
+    border-top: 2px solid #222;
+}
+.care-item:hover { border-top: 2px solid var(--rojo-detalles); }
+.care-item i { font-size: 2.2rem; color: var(--rojo-detalles); margin-bottom: 20px; }
+.care-item h3 { color: var(--blanco-titulos); margin-bottom: 15px; font-size: 1.6rem; }
+
+footer { text-align: center; padding: 80px 5%; background: #050505; border-top: 1px solid #111; }
+.footer-logo { font-size: 2.2rem; margin-bottom: 25px; }
+.social-icons a { color: var(--gris-texto); font-size: 2.2rem; margin: 0 15px; transition: 0.3s; }
+.social-icons a:hover { color: var(--rojo-detalles); }
+.copyright { font-size: 0.8rem; margin-top: 20px; }
